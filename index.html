@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #map{
+                width: 100vw;
+                height: 100vh;
+        }
+        /* .mapboxgl-popup {
+       max-width: 400px;
+       font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif; */
+/* } */
+
+    </style>
+    <title>Corona Map</title>
+</head>
+<body>
+    <div id='map' ></div>
+</body>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiYW1iZXNoIiwiYSI6ImNrdzRpd3FsYTFudWczMHJvYnZlYmNtNHcifQ.YjD9Xhpebpp3Ewo18qO5aA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/dark-v10',
+    zoom:1,
+    center:[0,20]
+  });
+
+//   map.on('load', () => {
+// map.addSource('map', {
+//         'type': 'datajson',
+//         'data': {
+//         'type': 'FeatureCollection',
+//         'features': [
+//                         {
+//                         'type': 'Feature',
+//                         'properties': {
+//                         'description':
+//                         ''
+//                         },
+//                         'geometry': {
+//                         'type': 'Point',
+//                         'coordinates': [-77.038659, 38.931567]
+//                         }
+//                         }
+//                     ]
+//                 }
+//                         });
+
+// map.addLayer({
+//             'id': 'places',
+//             'type': 'circle',
+//             'source': 'places',
+//             'paint': {
+//             'circle-color': '#4264fb',
+//             'circle-radius': 6,
+//             'circle-stroke-width': 2,
+//             'circle-stroke-color': '#ffffff'
+//                     }
+//             });
+// const popup = new mapboxgl.Popup({
+//         closeButton: false,
+//         closeOnClick: false
+// });
+ 
+// map.on('mouseenter', 'places', (e) => {
+//    map.getCanvas().style.cursor = 'pointer';
+//    const coordinates = e.features[0].geometry.coordinates.slice();
+//    const description = e.features[0].properties.description;
+ 
+// while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+// coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+// }
+ 
+// // Populate the popup and set its coordinates
+// // based on the feature found.
+// popup.setLngLat(coordinates).setHTML(description).addTo(map);
+// });
+ 
+// map.on('mouseleave', 'places', () => {
+// map.getCanvas().style.cursor = '';
+// popup.remove();
+// });
+
+// });
+
+</script>
+
+
+<script src="index.js"></script>
+</html>
